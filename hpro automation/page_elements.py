@@ -239,15 +239,62 @@ event = {
     'event_owner_tab': '//*[@ui-sref="crpo.events.manageEvent.eventDetails.owners"]',
     'event_owner_edit': '//*[@ui-sref="crpo.events.manageEvent.eventDetails.manageOwners"]',
     'event_interviewer_add': '//*[@data-ng-click="vm.moveAllItemsRight();"]',
-    'event_custom_users': '#mainBodyElement > div.ng-scope.unbranded > div > div:nth-child(3) > div.'
-                          'col-sm-12.no-padding.ng-scope > section > div:nth-child(2) > div > '
-                          'create-update-event-owners > div > div.row > div:nth-child(4) > div > '
-                          'transcluded-input > div > div > div > p > small > a',
+    'event_custom_users': '//*[@id="mainBodyElement"]/div[3]/div/div[2]/div[2]/section/div[2]/div/'
+                          'create-update-event-owners/div/div[1]/div[4]/div/transcluded-input/div/div/div/p/small/a',
     'role': '//*[@placeholder="Role"][@type="text"]',
     'custom_owner_add': '//*[@data-ng-click="vm.moveAllItemsRight();"]',
     'update_owners': '#mainBodyElement > div.ng-scope.unbranded > div > div:nth-child(3) > '
                      'div.col-sm-12.no-padding.ng-scope > section > div:nth-child(2) > div > '
                      'create-update-event-owners > div > div.col-sm-12.no-padding > div >'
-                     ' button.btn.btn-primary.back_btn.ng-scope'
+                     ' button.btn.btn-primary.back_btn.ng-scope',
+    'Floating_actions': '//*[@id="mainBodyElement"]/div[3]/div/div[2]/div[2]'
+                        '/section/div[1]/floating-actions/span/span/i',
+    'event_upload_candidates': '//*[@title="Upload Candidates"]',
+    'event_upload_file': '//*[@type="file"][@file-model="vm.uploadedCandidateTemplateFile"]',
+    'Next_Button': '//*[@data-ng-click="vm.gotoNextState()"]',
+    'declare_checkbox': '//*[@type="checkbox"][@ng-click="vm.viewDeclaration();"]',
+    'signature': '//*[@type="text"][@ng-model="vm.signature"]',
+    'Agree': '//*[@type="button"][@data-ng-click="$hide();vm.isAgreement=true;"]',
+    'save_uploads': '//*[@data-ng-click="vm.consolidateCandidateInfo();"]',
+    'upload_candidate_count': '//*[@id="mainBodyElement"]/div[6]/div/div/div[2]/div[2]/div[2]',
+    'close_pop_details_window': '//*[@type="button"][@ng-click="$hide()"]',
+    'View_Applicants': '//*[@title="View Candidates"]',
+    'applicant_advance_search': '//*[@data-title="Search"]',
+    'applicant_name': 'name',
+    'applicant_search_button': '//*[@ng-click="vm.apply();$hide();"]',
+    'applicant_getbyid': '//*[@title="{}"]',
+    'applicant_validate': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[1]/div/div/div[2]/div[1]/p[1]',
+    'applicant_select_checkbox': 'grid_items',
+    'Change_applicant_status': '//*[@data-title="Change Applicant Status"]',
+    'change_stage': '//*[@ng-model="vm.selectedStage"]',
+    'change_status': '//*[@ng-model="vm.selectedStatus"]',
+    'comment': '//*[@ng-model="vm.comments"]',
+    'change_button': '//*[@ng-click="vm.changeCandidateStatus()"]',
+    'current_status': '//*[@title="{}"]',
+    'Event_advance_search': '//*[@data-title="Search"]',
+    'event_names': 'Name',
+    'event_search_button': '//*[@ng-click="vm.apply();$hide();"]',
+    'Click_on_event_name': '//*[@title="Click to view full details"]',
+    'manage_task': '//*[@title="Manage Task"]',
+    'candidate_details_floating_actions': '//*[@id="mainBodyElement"]/div[3]/div/div[1]'
+                                          '/div[2]/floating-actions/span/span/i',
+    'task_candidate_name': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[1]/div/div[1]/div[1]/span',
+    'total_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[5]',
+    'approved_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[4]',
+    'pending_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[2]',
+    'submitted_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[1]',
+    'rejected_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[3]',
+    'more_tabs': '//*[@data-placement="bottom-center"]',
+}
 
+pofu = {
+    'POFU_App': '//*[@ng-click="vm.invokeOtherApp(value.click)"]',
+    'pofu_candidates_tab': '/html/body/div[1]/header[2]/div/div/div[2]/div/ul/li[2]/a',
+    'pofu_candidates_advance_search': '//*[@ng-click="vm.toggleAdvancedSearch()"]',
+    'pofu_candi_text_box': '//*[@ng-model="vm.candidateSearchCriteria.CandidatName"]',
+    'pofu_search_button': '/html/body/div[2]/div/div[1]/section/div/div/di'
+                          'v[1]/div/div/div/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div/div[3]/div[3]/button',
+    'submit_behalf_of': '//*[@title="Submit Tasks on Behalf of Candidate"]',
+    'task_acceptance': 'testacceprtanceoffer',
+    'submit_task': '//*[@data-ng-click="vm.submitForm(false);"]'
 }
