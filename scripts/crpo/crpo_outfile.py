@@ -25,22 +25,21 @@ class CrpoOutputFile(styles.FontColor, create_event.CreateEvent):
         self.size = self.rowsize
         self.job_usecase_col = 0
         self.job_status_col = 1
-        self.req_usecase_col = 2
-        self.req_status_col = 3
-        self.test_usecase_col = 4
-        self.test_status_col = 5
-        self.event_usecase_col = 6
-        self.event_status_col = 7
-        self.task_usecase_col = 8
-        self.task_status_col = 9
+        self.req_usecase_col = 6
+        self.req_status_col = 7
+        self.test_usecase_col = 8
+        self.test_status_col = 9
+        self.event_usecase_col = 2
+        self.event_status_col = 3
+        self.task_usecase_col = 4
+        self.task_status_col = 5
 
         index = 0
-        excelheaders = ['Job UseCases', 'Job Status', 'Requirement Usecases', 'Requirement Status', 'Test UseCases',
-                        'Test Status', 'Event UseCases', 'Event Status', 'Task Assignment', 'Task Assignment Status']
+        excelheaders = ['Job UseCases', 'Status', 'Event UseCases', 'Status', 'Test UseCases',
+                        'Status', 'Requirement Usecases', 'Status', 'Task Assignment', 'Status']
         for headers in excelheaders:
-            if headers in ['Job UseCases', 'Job Status', 'Requirement Usecases', 'Requirement Status', 'Test UseCases',
-                           'Test Status', 'Event UseCases', 'Event Status', 'Task Assignment',
-                           'Task Assignment Status']:
+            if headers in ['Job UseCases', 'Event UseCases', 'Test UseCases',  'Requirement Usecases',
+                           'Task Assignment', 'Status']:
                 self.ws.write(1, index, headers, self.style0)
             else:
                 self.ws.write(1, index, headers, self.style1)
@@ -403,4 +402,6 @@ class CrpoOutputFile(styles.FontColor, create_event.CreateEvent):
         self.ws.write(0, 5, self.date_now, self.style5)
         self.ws.write(0, 6, 'SERVER', self.style4)
         self.ws.write(0, 7, self.login_server, self.style5)
+        self.ws.write(0, 8, 'No.of Use Cases', self.style4)
+        self.ws.write(0, 9, len(self.Actual_success_cases), self.style5)
         self.wb_Result.save(test_data_inputpath.crpo_test_data_file['output_report'])

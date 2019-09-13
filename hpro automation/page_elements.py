@@ -77,10 +77,14 @@ job = {
     'getbyid_feedback_from_name_search': '//*[@placeholder="Name like."][@type="text"]',
 
     'getbyid_feedback_from_search_button': '//*[@ng-click="vm.service.templates.search();"][@type="submit"]',
+    'new_getbyid_feedback_from_search_button': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[4]/'
+                                               'div/div/div[2]/div/div/div[2]/div/div[4]/button',
 
     'getbyid_feedback_form_use': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[4]/div/div/div[2]'
                                  '/div/div/interview-templates-search/div/accordian-row-table/table/tbody'
                                  '/tr/td[3]/div/span[1]',
+    'new_getbyid_feedback_form_use': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[4]/div/'
+                                     'div/div[2]/div/div/div[2]/accordian-row-table/table/tbody/tr[3]/td[3]/div/span',
 
     'Resolution_Strategy': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[4]/div/div/div[2]/div/div/div[1]/div[2]'
                            '/div/table/tbody/tr[1]/td[2]/div/label[2]',
@@ -251,6 +255,8 @@ event = {
                         '/section/div[1]/floating-actions/span/span/i',
     'event_upload_candidates': '//*[@title="Upload Candidates"]',
     'event_upload_file': '//*[@type="file"][@file-model="vm.uploadedCandidateTemplateFile"]',
+    'event_interviews': '//*[@title="View Event Interviews"]',
+    'provide_feedback': '//*[@data-title="Provide Interview Feedback"]',
     'Next_Button': '//*[@data-ng-click="vm.gotoNextState()"]',
     'declare_checkbox': '//*[@type="checkbox"][@ng-click="vm.viewDeclaration();"]',
     'signature': '//*[@type="text"][@ng-model="vm.signature"]',
@@ -268,6 +274,10 @@ event = {
     'Change_applicant_status': '//*[@data-title="Change Applicant Status"]',
     'change_stage': '//*[@ng-model="vm.selectedStage"]',
     'change_status': '//*[@ng-model="vm.selectedStatus"]',
+    'Interviewer': '//*[@title="Select Interviewers"]',
+    'Interviewer_selection': '//*[@id="mainBodyElement"]/div[6]/div/div/div[2]/div[6]/div/div/span/div/div'
+                             '/div[2]/div/button[2]/i[1]',
+    'Interviewer_selection_done': '//*[@ng-click="$hide();"]',
     'comment': '//*[@ng-model="vm.comments"]',
     'change_button': '//*[@ng-click="vm.changeCandidateStatus()"]',
     'current_status': '//*[@title="{}"]',
@@ -285,6 +295,16 @@ event = {
     'submitted_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[1]',
     'rejected_tasks': '//*[@id="mainBodyElement"]/div[3]/div[2]/div[1]/div[3]/div[1]/div/div[3]',
     'more_tabs': '//*[@data-placement="bottom-center"]',
+    'reschedule': '//*[@data-title="Reschedule Interview"]',
+    'reschedule1': '//*[@id="req-list-view"]/tr/td[2]/div/div[3]/div[2]/div/div[2]',
+    'reschedule_comment': '//*[@ng-model="vm.comments"]',
+    'reschedule_save': '//*[@ng-click="vm.save();"]',
+    'tracking_module': '//*[@ui-sref="crpo.events.manageEvent.eventDetails.tracking"]',
+    'tracking_request': '//*[@ui-sref="crpo.events.manageEvent.eventDetails.tracking.interviewCancelRequest"]',
+    'approve': '//*[@title="Approve Request"]',
+    'request_comment': '//*[@ng-model="data.comments"]',
+    'request_ok': '//*[@ng-click="data.result=true;$hide();"]'
+
 }
 
 pofu = {
@@ -297,4 +317,99 @@ pofu = {
     'submit_behalf_of': '//*[@title="Submit Tasks on Behalf of Candidate"]',
     'task_acceptance': 'testacceprtanceoffer',
     'submit_task': '//*[@data-ng-click="vm.submitForm(false);"]'
+}
+
+settings = {
+    'settings_icon': '//*[@id="mainBodyElement"]/div[1]/div/header/div[1]/nav/div/div[3]/a/i',
+    'settings': '//*[@ui-sref="crpo.settings"]',
+    'Interview_module': '//*[@title="Interview Module"]',
+    'new_interview_feedback_form': '//*[@ui-sref="crpo.settings.interview.enableNewInterviewFeedbackForm"]',
+    'on': '//*[@id="mainBodyElement"]/div[3]/section/div/div/div[2]/div/ui-view/div/div/div/div[2]/div/label[1]',
+    'off': '//*[@id="mainBodyElement"]/div[3]/section/div/div/div[2]/div/ui-view/div/div/div/div[2]/div/label[2]'
+}
+
+feedback = {
+    'more': '//*[@data-trigger="click"]',
+    'cancel_1': '//*[@id="req-list-view"]/tr/td[2]/div/div[3]/div[3]/div/div[2]',
+
+    'cancel': '//*[@data-title="Cancel Interview"]',
+    'cancel_confirm': '//*[@ng-click="vm.cancelInterview();"]',
+    'cancel_request': '//*[@data-title="Cancel Interview Request"]',
+    'cancel_request_reason': '//*[@type="text"][@placeholder="Reason"]',
+    'comment': '//*[@ng-model="vm.comment"]',
+    'cancel_request_save': '//*[@ng-click="vm.cancelInterviewReq();"]',
+    'maybe': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/div[2]/div/label[1]',
+    'shortlist': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/div[2]/div/label[1]',
+    'save_draft': '//*[@ng-click="vm.saveDraft();"]',
+
+    'rating_1': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/'
+                'accordian-row-table/table/tbody/tr[2]/td/div/div[1]/select',
+    'comment_1': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/'
+                 'accordian-row-table/table/tbody/tr[2]/td/div/div[2]/div/textarea',
+    'rating_2': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/'
+                'accordian-row-table/table/tbody/tr[4]/td/div/div[1]/select',
+    'comment_2': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/'
+                 'accordian-row-table/table/tbody/tr[4]/td/div/div[2]/div/textarea',
+    'overall': '//*[@ng-model="vm.finalTranscript"]',
+    'partial_feedback': '//*[@ng-click="vm.partialSubmitFeedback();"]',
+
+    'feedback_form_validation_agree': '//*[@id="mainBodyElement"]/div[6]/div/div/div[3]/div/button[2]',
+    'submit_feedback': '//*[@ng-click="vm.submitFeedback(vm.isUpdateFeedback);"]',
+    'Interview_bucket': '//*[@ng-model="vm.config.selectedEntityType"]',
+    'review_feedback': '//*[@id="mainBodyElement"]/div[6]/div/div/div[3]/div/button[2]',
+}
+
+unlock = {
+    'All_my_interviews': '//*[@ng-model="vm.config.selectedDropdownValue"]',
+    'unlock_action': '//*[@data-title="Unlock Interviewer Feedback"]',
+    'all_interviewers': '//*[@ng-model="vm.isAllSelected"]',
+    'unlock_feedback_button': '//*[@id="mainBodyElement"]/div[6]/div/div/div[3]/div/button[2]',
+    'comment': '//*[@ng-model="data.comments"]',
+    'ok': '//*[@ng-click="data.result=true;$hide();"]'
+
+}
+
+update = {
+    'shortlist': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[3]/div/div[2]/div/label[1]'
+}
+
+new_feedback = {
+    'overall': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section[2]'
+               '/div[2]/div/div/div/div/div[2]/auto-grow-textarea/textarea',
+    'duration': '//*[@ng-model="vm.data.interviewForm.overallSection.duration"]',
+    'save_as_draft': '//*[@id="mainBodyElement"]/div[3]/div/div[2]/button[2]',
+
+    'Q1': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section[2]/div[1]/div[1]/div/div[1]/div/select',
+    'Q1_comment': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section[2]/'
+                  'div[1]/div[1]/div/div[2]/div/auto-grow-textarea/textarea',
+    'Q2': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section[2]/div[1]/div[2]/div/div[1]/div/select',
+    'Q2_comment': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section[2]/div[1]/div[2]'
+                  '/div/div[2]/div/auto-grow-textarea/textarea',
+    'Q3': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section[2]/div[1]/div[3]/div/div/div/select',
+    'maybe': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/di'
+             'v/section/div[2]/div/div/div/div/div[1]/div/div[3]',
+    'submit_feedback': '//*[@id="mainBodyElement"]/div[3]/div/div[2]/button[1]',
+    
+    'u_Q1_comment': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section/'
+                    'div[1]/div[1]/div/div[2]/div/auto-grow-textarea/textarea',
+    'u_Q2_comment': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section'
+                    '/div[1]/div[2]/div/div[2]/div/auto-grow-textarea/textarea',
+    'shortlist': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section'
+                 '/div[2]/div/div/div/div/div[1]/div/div[1]',
+    'u_overall': '//*[@id="mainBodyElement"]/div[3]/div/div[1]/div[2]/div/div/section'
+                 '/div[2]/div/div/div/div/div[2]/auto-grow-textarea/textarea',
+    'update_feedback': '//*[@id="mainBodyElement"]/div[3]/div/div[2]/button',
+
+}
+
+live_interview = {
+    'live_interview_action': '//*[@title="Live Schedule Interviews"]',
+    'select_stage': '//*[@ng-model="vm.selectedInterviewStage"]',
+    'candidate_name': '//*[@ng-model="vm.inputCandidateName"]',
+    'search_button': '//*[@ng-click="vm.searchApplicants();"]',
+    'select_search_candidates': '//*[@ng-model="vm.isAllSelected"]',
+    'schedule': '//*[@ng-click="vm.openScheduleMultipleModal();"]',
+    'scheduled': '//*[@id="mainBodyElement"]/div[6]/div/div/div[3]/div/button[2]',
+    'details': '//*[@id="mainBodyElement"]/div[3]/div/div/div[2]/accordian-row-table/table/tbody/tr/td[7]',
+    'provide_feedback': '//*[@ng-click="data.onGiveFeedbackClick(rowKey);"]'
 }
